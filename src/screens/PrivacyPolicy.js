@@ -37,11 +37,7 @@ const ParaGraph = styled('p')(({ theme }) => ({
 }))
 
 
-
-
 function PrivacyPolicy() {
-
-
 
     return (
         <Container>

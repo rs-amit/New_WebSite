@@ -72,10 +72,14 @@ const Navbar = ({ isScroll, setScroll }) => {
         <ReactLink style={{ textDecoration: "none" }} to={to} {...props}>
           <TypographyView
             component={"span"}
-            fontWeight={homePageLink ? "400" : "700"}
-            color={
-              homePageLink ? COLORS.HOMEPAGE_LINKS_COLOR : "rgb(27, 55, 107)"
-            }
+            color={COLORS.HOMEPAGE_LINKS_COLOR }
+            fontWeight='400'
+
+            // fontWeight={homePageLink ? "400" : "700"}
+            // color={
+            //   homePageLink ? COLORS.HOMEPAGE_LINKS_COLOR : "rgb(27, 55, 107)"
+            // }
+
             fontSize={fontSize}
           >
             {children}
@@ -83,7 +87,7 @@ const Navbar = ({ isScroll, setScroll }) => {
               <div
                 style={{
                   height: 4,
-                  width: 75,
+                  // width: "fit-content",
                   backgroundColor: "rgb(27, 55, 107)",
                 }}
               />
@@ -127,6 +131,7 @@ const Navbar = ({ isScroll, setScroll }) => {
 
   // const isMobile = true;
   // const topicData = [{ text: "a", path: "a" }];
+
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -173,9 +178,7 @@ const Navbar = ({ isScroll, setScroll }) => {
   const homePageMenuItems = ["Clinics", "Consult a Vet", "Blog"];
   const homePageOtherMenuItems = [
     { value: "About Us" },
-    {
-      value: "Careers",
-    },
+    {value: "Careers",  },
   ];
   const renderMobileMenu = (
     <Menu
@@ -222,9 +225,10 @@ const Navbar = ({ isScroll, setScroll }) => {
               {redirectUrl(
                 <Typography
                   component={"span"}
-                  fontWeight={homePageLink ? "400" : "700"}
+                  fontWeight='400'
                   color={homePageLink ? "#4C4C4C" : "rgb(27, 55, 107)"}
                   fontSize="16px"
+                  // fontWeight={homePageLink ? "400" : "700"}
                 >
                   Careers
                 </Typography>,
@@ -286,8 +290,8 @@ const Navbar = ({ isScroll, setScroll }) => {
           >
             {homePageLink && (
               <>
-                {["Clinics", "Consult a vet", "Blog"].map((value) => {
-                  return (
+                {
+                  ["Clinics", "Consult a vet", "Blog"].map((value, index) => (
                     <span
                       style={{
                         marginRight: 40,
@@ -299,8 +303,9 @@ const Navbar = ({ isScroll, setScroll }) => {
                     >
                       <CustomLink to="/#"> {value} </CustomLink>
                     </span>
-                  );
-                })}
+
+                  ))
+                }
               </>
             )}
             <span
@@ -329,8 +334,10 @@ const Navbar = ({ isScroll, setScroll }) => {
               {redirectUrl(
                 <TypographyView
                   component={"span"}
-                  fontWeight={homePageLink ? "400" : "700"}
-                  color={homePageLink ? "#4C4C4C" : "rgb(27, 55, 107)"}
+                  color="#4C4C4C"
+                  fontweight='400'
+                  // fontWeight={homePageLink ? "400" : "700"}
+                  // color={homePageLink ? "#4C4C4C" : "rgb(27, 55, 107)"}
                 >
                   Careers
                 </TypographyView>,
@@ -369,7 +376,7 @@ const Navbar = ({ isScroll, setScroll }) => {
                   {homePageLink ? (
                     <img
                       src={homePageMenuIcon}
-                      // style={{ marginRight: "18px" }}
+                    // style={{ marginRight: "18px" }}
                     />
                   ) : (
                     <>
