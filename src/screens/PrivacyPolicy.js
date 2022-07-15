@@ -1,24 +1,19 @@
 import React from 'react';
 import { styled } from "@mui/material/styles";
-import { letterSpacing } from '@mui/system';
 
 
 const Container = styled('div')(({ theme }) => ({
-    // border: "1px solid black",
     height: "88vh",
     maxHeight: "fit-content",
 }))
 
 const View = styled('div')(({ theme }) => ({
-    // border: "1px solid black",
     maxWidth: "66ch",
     margin: "auto",
     padding: '20px',
-    // boxSizing: "border-box",
 }))
 
 const Title = styled('div')(({ theme }) => ({
-    // border: "1px solid black",
     fontSize: "calc(30px * 0.85)",
     fontFamily: "'Roboto', sans-serif",
     textAlign: 'center',
@@ -35,21 +30,21 @@ const InfoList = styled('li')(({ theme }) => ({
 
 
 const ParaGraph = styled('p')(({ theme }) => ({
-    margin: '0 0 15px',
+    margin: '0 0 45px',
     fontSize: '17px',
     fontFamily: "'Roboto', sans-serif",
 }))
 
 
-const ParaGraphArray = [{
-    content: 'Pets Centric Private Limited a private limited company with its registered office at 112, 11th Cross, 4th Sector, HSR Layout, Bangalore, Karnataka, India, 560102 operates the website www.supertails.com (hereinafter referred to as the "Platform"). The Company is committed to protecting Your privacy and the information that You share while using the Platform. We value the trust You place in Us. That’s why We maintain the highest security standards for securing the transactions and Your information.'
-}, {
-    content: 'This privacy policy specifies the manner in which personal data and other information is collected, received, stored, processed, disclosed, transferred, dealt with, or otherwise handled by the Company. This Privacy Policy does not apply to information that You provide to, or that is collected by, any third-party through the Platform, and any Third-Party Sites (defined below) that You access or use in connection with the Services offered on the Platform.'
-}, {
-    content: 'Please read the Privacy Policy carefully prior to using or registering on the Platform or accessing any material, information or availing any Services through the Platform.'
-}, {
-    content: 'Please read the Privacy Policy carefully prior to using or registering on the Platform or accessing any material, information or availing any Services through the Platform.'
-}]
+const ParaGraphArray = [
+   'Pets Centric Private Limited a private limited company with its registered office at 112, 11th Cross, 4th Sector, HSR Layout, Bangalore, Karnataka, India, 560102 operates the website www.supertails.com (hereinafter referred to as the "Platform"). The Company is committed to protecting Your privacy and the information that You share while using the Platform. We value the trust You place in Us. That’s why We maintain the highest security standards for securing the transactions and Your information.'
+, 
+   'This privacy policy specifies the manner in which personal data and other information is collected, received, stored, processed, disclosed, transferred, dealt with, or otherwise handled by the Company. This Privacy Policy does not apply to information that You provide to, or that is collected by, any third-party through the Platform, and any Third-Party Sites (defined below) that You access or use in connection with the Services offered on the Platform.'
+, 
+   'Please read the Privacy Policy carefully prior to using or registering on the Platform or accessing any material, information or availing any Services through the Platform.'
+, 
+   'Please read the Privacy Policy carefully prior to using or registering on the Platform or accessing any material, information or availing any Services through the Platform.'
+]
 
 const collectionOfInformation = [{
     title: 'Collection of Information',
@@ -86,15 +81,13 @@ function PrivacyPolicy() {
                 <Title>Privacy policy</Title>
                 <div>
                     {
-                        ParaGraphArray.map((data) => (
+                        ParaGraphArray.map((content) => (
                             <>
                                 <>
                                     <ParaGraph>
-                                        {data.content}
+                                        {content}
                                     </ParaGraph>
-                                    <ParaGraph>
-                                        &nbsp;
-                                    </ParaGraph>
+                                    
                                 </>
                             </>
                         ))
